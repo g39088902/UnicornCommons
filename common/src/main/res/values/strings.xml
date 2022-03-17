@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hint_no_content">暂时没有内容哦</string>
+
+
+    <string name="refuse">拒绝</string>
+    <string name="agree">同意</string>
+    <string name="all_read">一键已读</string>
+    <string name="agreed">已同意</string>
+    <string name="connect_administrator">已拒绝/已过期，如需加入联系学校管理员</string>
+
+</resources>
