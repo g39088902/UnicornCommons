@@ -8,6 +8,7 @@ import okhttp3.Response
 * 请求日志拦截
 * */
 class HttpLoggingInterceptor : Interceptor {
+
     override fun intercept(chain: Interceptor.Chain): Response {
 
         val request = chain.request()

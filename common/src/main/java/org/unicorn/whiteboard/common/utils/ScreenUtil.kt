@@ -21,6 +21,9 @@ object ScreenUtil {
         return dm.heightPixels
     }
 
+    /**
+     * 状态栏高度
+     */
     @JvmStatic
     fun getStatusBarHeight(context: Context?): Int {
         var height = 0

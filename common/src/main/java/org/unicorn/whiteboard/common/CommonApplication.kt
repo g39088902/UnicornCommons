@@ -10,14 +10,13 @@ import org.unicorn.whiteboard.common.crash.CrashUtil
 import org.unicorn.whiteboard.common.flowevent.FlowEventInitializer
 import kotlin.properties.Delegates
 
-open class CommonApplication : Application() {
+open class CommonApplication :Application(){
     companion object {
         private val TAG = "CommonApplication"
 
         var context: Context by Delegates.notNull() //委托
             private set
     }
-
     override fun attachBaseContext(base: Context?) {
         super.attachBaseContext(base)
         MultiDex.install(this)
@@ -31,8 +30,7 @@ open class CommonApplication : Application() {
         //活动管理
         ActivityManager.instance.init(this)
 
-       CrashUtil.instance.init(this)
-
+        CrashUtil.instance.init(this)
 
     }
 

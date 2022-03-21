@@ -16,9 +16,6 @@ fun <VB : ViewBinding> ComponentActivity.binding(
     }
 }
 
-
-
-///////////////////////////////////////////////ViewBinding///////////////////////////////////
 inline fun <reified VB : ViewBinding> Activity.inflate() = lazy {
     inflateBinding<VB>(layoutInflater).apply { setContentView(root) }
 }

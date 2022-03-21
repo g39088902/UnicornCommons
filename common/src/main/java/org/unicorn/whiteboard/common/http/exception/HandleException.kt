@@ -31,21 +31,18 @@ object HandleException {
                 ApiResultCode.SERVICE_UNAVAILABLE -> ResultException(t.code().toString(), "服务器错误")
                 else -> ResultException(t.code().toString(), "网络错误")
             }
-            is JsonParseException,
-            is JSONException,
-            is ParseException -> ex = ResultException("0", "解析错误")
-            is SocketException -> ex =
-                ResultException(ApiResultCode.REQUEST_TIMEOUT.toString(), "网络连接错误，请重试")
-            is SocketTimeoutException -> ex =
-                ResultException(ApiResultCode.REQUEST_TIMEOUT.toString(), "网络连接超时")
+            is JsonParseException, is JSONException, is ParseException -> ex = ResultException("0", "解析错误")
+            is SocketException -> ex = ResultException(ApiResultCode.REQUEST_TIMEOUT.toString(), "网络连接错误，请重试")
+            is SocketTimeoutException -> ex = ResultException(ApiResultCode.REQUEST_TIMEOUT.toString(), "网络连接超时")
             is SSLHandshakeException -> ex = ResultException("0", "证书验证失败")
             is UnknownHostException -> ex = ResultException("0", "网络错误，请切换网络重试")
             is UnknownServiceException -> ex = ResultException("0", "网络错误，请切换网络重试")
             is NumberFormatException -> ex = ResultException("0", "数字格式化异常")
-            else -> ex = ResultException("0", "未知错误")
+            else -> {
+                ex = ResultException("0", "未知错误")
+            }
         }
-
-        CoroutineScope(Dispatchers.Main).launch {
+        CoroutineScope(Dispatchers.Main).launch{
             toast(ex.msg)
         }
 

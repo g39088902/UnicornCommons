@@ -55,7 +55,7 @@ inline fun <reified T> removeStickyEvent(event: Class<T>) {
 }
 
 /**
- * 清除粘性事件
+ * 移除粘性事件
  * ViewModelStoreOwner
  */
 inline fun <reified T> removeStickyEvent(scope: ViewModelStoreOwner, event: Class<T>) {
@@ -67,16 +67,16 @@ inline fun <reified T> removeStickyEvent(scope: ViewModelStoreOwner, event: Clas
 /**
  * 清除事件缓存
  */
-inline fun <reified T> clearStickyEvent(event: Class<T>) {
+inline fun <reified T> clearStickyEvent(clazz: Class<T>) {
     ApplicationScopeViewModelProvider.getApplicationProvider(FlowEventCoreViewModel::class.java)
-        .clearStickEvent(event.name)
+        .clearStickEvent(clazz.name)
 }
 /**
  * 清除事件缓存
  */
-inline fun <reified T> clearStickyEvent(scope: ViewModelStoreOwner, event: Class<T>) {
+inline fun <reified T> clearStickyEvent(scope: ViewModelStoreOwner, clazz: Class<T>) {
     ViewModelProvider(scope)[FlowEventCoreViewModel::class.java]
-        .clearStickEvent(event.name)
+        .clearStickEvent(clazz.name)
 }
 
 /**

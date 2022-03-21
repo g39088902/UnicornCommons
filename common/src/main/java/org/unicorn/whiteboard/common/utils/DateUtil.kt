@@ -15,7 +15,7 @@ object DateUtil {
         val MINUTE = second / 60
         val SECOND = second % 60
 
-        var str: String = ""
+        var str = ""
         if (DAY > 0) {
             str += String.format("%03d日", DAY)
         }
@@ -28,6 +28,7 @@ object DateUtil {
         if (SECOND > 0) {
             str += String.format("%02d秒", SECOND)
         }
+        if (second == 0 ) str += "0秒"
 
         return str
     }

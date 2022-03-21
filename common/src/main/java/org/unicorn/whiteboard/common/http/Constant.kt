@@ -8,7 +8,7 @@ object Constant {
     const val OSS_URL = "https://$ENV.unicorn.org.cn/minioimg/"
     const val ODS_URL = "https://$AUENV.unicorn.org.cn/ods/api/"
 
-
-    const val COGNITO_URL = "https://$AUENV.unicorn.org.cn/cognito/api/"
+    //const val COGNITO_URL = "https://$ENV.unicorn.org.cn/cognito/api/"
+    const val COGNITO_URL = "https://dev.unicorn.org.cn/cognito/api/"
 
 }

@@ -18,6 +18,7 @@ object ApiFactory {
     private val client: OkHttpClient by lazy {
 
         OkHttpClient.Builder()
+            // .addInterceptor(HttpLoggingInterceptor())
             .addInterceptor(CommonInterceptor())
             .sslSocketFactory(
                 SSLSocketClient.getSSLSocketFactory(),
@@ -42,12 +43,13 @@ object ApiFactory {
 
     fun <T> create(service: Class<T>): T {
         val url = when (service) {
+            // is ApiService -> BASE_URL
             is OdsService -> ODS_URL
             else -> BASE_URL
         }
-
-        return retrofitClient(url).create(service)
+        return create(url, service)
     }
+
 
     fun <T> create(url: String, service: Class<T>): T {
         return retrofitClient(url).create(service)

@@ -20,11 +20,22 @@ object Tips {
         lastDisplayTime = System.currentTimeMillis() + 4000
         Toast.makeText(context, str, Toast.LENGTH_SHORT).show()
     }
+
+    /* fun toast(context:  Context, str: String) {
+         if (str == lastDisplayString && System.currentTimeMillis() < lastDisplayTime) return
+         lastDisplayString = str
+         lastDisplayTime = System.currentTimeMillis() + 4000
+          Toast.makeText(context, str, Toast.LENGTH_SHORT).show()
+     }
+ */
+
 }
+
 
 val mainHandler by lazy {
     Handler(Looper.getMainLooper())
 }
+
 
 suspend fun Activity.toast(msg: String) {
     withContext(Dispatchers.Main) {
@@ -32,14 +43,20 @@ suspend fun Activity.toast(msg: String) {
     }
 }
 
-fun Fragment.toast(msg: String) {
-    mainHandler.post {
+suspend fun Activity.toastNetError() {
+    withContext(Dispatchers.Main) {
+        toastPrivate("网络连接已断开")
+    }
+}
+
+suspend fun Fragment.toast(msg: String) {
+    withContext(Dispatchers.Main) {
         requireContext().toastPrivate(msg)
     }
 }
 
-fun Context.toast(msg: String) {
-    mainHandler.post {
+suspend fun Context.toast(msg: String) {
+    withContext(Dispatchers.Main) {
         toastPrivate(msg)
     }
 }

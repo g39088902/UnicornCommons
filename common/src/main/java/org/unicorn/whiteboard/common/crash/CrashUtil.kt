@@ -17,7 +17,7 @@ class CrashUtil private constructor() : Thread.UncaughtExceptionHandler {
         private val TAG = "CrashUtil"
 
         private val SD_CARD_PATH =
-            Environment.getExternalStorageDirectory().absolutePath + "/crash"
+                Environment.getExternalStorageDirectory().absolutePath + "/crash"
 
 
         @JvmStatic
@@ -36,7 +36,7 @@ class CrashUtil private constructor() : Thread.UncaughtExceptionHandler {
     /** 格式化日期，作为日志文件名的一部分  */
     private val formatter = SimpleDateFormat("yyyy-MM-dd_HH:mm:ss", Locale.getDefault())
 
-    private var mContext: Context? = null
+    private lateinit var mContext: Context
 
     fun init(context: Context) {
         mDefaultCrashHandler = Thread.getDefaultUncaughtExceptionHandler()
@@ -133,7 +133,8 @@ class CrashUtil private constructor() : Thread.UncaughtExceptionHandler {
                     println(s)
                 }
 
-                val fileOutputStream = FileOutputStream("$SD_CARD_PATH/$fileName")
+                //val fileOutputStream = FileOutputStream("${ SD_CARD_PATH}/$fileName")
+                val fileOutputStream = FileOutputStream("${ mContext.getExternalFilesDir("crash")}/$fileName")
                 fileOutputStream.write(sb.toString().toByteArray())
                 fileOutputStream.close()
             }
