@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="deal_requirement">处理要求</string>
+    <string name="notification">通知信息</string>
+    <string name="message">消息</string>
+    <string name="class_invitation">班级邀请</string>
+    <string name="school_invitation">学校邀请</string>
+    <string name="invitation_succeed">邀请成功</string>
+    <string name="invitation_failed">邀请失败</string>
+    <string name="invitation_again">重新邀请</string>
+    <string name="invitation_expired">邀请过期</string>
 
-    <string name="hint_no_content">暂时没有内容哦</string>
+    <string name="authentication_succeed">认证成功</string>
+    <string name="authentication_failed">认证失败</string>
+    <string name="cause_analysis">查看失败原因</string>
+
+    <string name="notice_school_member_exit">学校人员退出通知</string>
+    <string name="notice_school_dissolution">学校解散通知</string>
+    <string name="notice_exit_succeed">退出成功</string>
+
+    <string name="abort_submit_job">作业即将截止提交</string>
+    <string name="submit_job">提交作业</string>
+    <string name="check_list">查看名单</string>
+
+    <string name="notice_check_job">作业批阅通知</string>
+    <string name="check_job_report">查看作业报告</string>
+    <string name="daily_comment">日常评价</string>
+    <string name="deal">去处理</string>
+    <string name="review_activity">活动审核</string>
+    <string name="update_notice">更新公告</string>
 
 
     <string name="refuse">拒绝</string>
@@ -9,5 +35,13 @@
     <string name="all_read">一键已读</string>
     <string name="agreed">已同意</string>
     <string name="connect_administrator">已拒绝/已过期，如需加入联系学校管理员</string>
+
+    <string name="hint_no_content">暂时没有内容哦</string>
+
+
+    <string name="homework_detail">作业详情</string>
+    <string name="all_class">全部班级</string>
+
+
 
 </resources>

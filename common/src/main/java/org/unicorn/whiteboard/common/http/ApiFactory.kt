@@ -18,7 +18,6 @@ object ApiFactory {
     private val client: OkHttpClient by lazy {
 
         OkHttpClient.Builder()
-            // .addInterceptor(HttpLoggingInterceptor())
             .addInterceptor(CommonInterceptor())
             .sslSocketFactory(
                 SSLSocketClient.getSSLSocketFactory(),

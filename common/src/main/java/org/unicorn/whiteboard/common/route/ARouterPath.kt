@@ -33,6 +33,5 @@ object ARouterPath {
 
     //个人资料
     const val PROFILE = "/login/activity/profile"
-    const val USER_PROFILE_FRAGMENT = "/login/fragment/userProfile"
 
 }
