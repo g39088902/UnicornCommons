@@ -18,7 +18,16 @@ object ARouterPath {
 
     //主页
     const val HOME_PAGE = "/app/activity/homePage"
+
+    //作业
+    const val HOMEWORK_DETAIL = "/app/activity/homeworkDetail"
     const val CHECK_HOMEWORK = "/app/activity/checkHomework"
+    const val UNCHECK_HOMEWORK = "/app/fragment/uncheckHomework"
+    const val CHECKED_HOMEWORK = "/app/fragment/checkedHomework"
+    const val NOT_SUBMIT_HOMEWORK = "/app/fragment/notSubmitHomework"
+    const val RECYCLER_CHECKED = "/app/activity/recycleChecked"
+    const val RECYCLER_ANSWER = "/app/activity/recycleAnswer"
+
     const val NOTIFICATION = "/app/activity/notification"
     const val NOTIFICATION_FRAGMENT = "/app/fragment/notification"
     const val NOTIFICATION_DETAIL = "/app/fragment/detail"
