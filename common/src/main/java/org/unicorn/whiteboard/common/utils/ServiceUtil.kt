@@ -11,6 +11,11 @@ import android.util.Log
  */
 object ServiceUtil {
 
+
+    /**
+     * 判断服务是否运行
+     * className:全路径包名
+     */
     fun isServiceWorking(activity: Activity, className: String): Boolean {
         val activityManager =
             activity.applicationContext.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
