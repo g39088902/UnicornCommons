@@ -1,7 +1,3 @@
-
-
-@file:Suppress("unused")
-
 package org.unicorn.whiteboard.common.base
 
 import android.os.Bundle

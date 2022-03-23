@@ -8,7 +8,7 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.core.content.ContextCompat
 
-/*
+/**
 * 资源获取工具
 * */
 object ResUtil {

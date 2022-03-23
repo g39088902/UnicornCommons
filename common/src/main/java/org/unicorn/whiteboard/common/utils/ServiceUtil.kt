@@ -5,13 +5,7 @@ import android.app.ActivityManager
 import android.content.Context
 import android.util.Log
 
-/**
- * create by tlq,on 2022/3/10
- * Desc:
- */
 object ServiceUtil {
-
-
     /**
      * 判断服务是否运行
      * className:全路径包名
