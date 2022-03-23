@@ -13,7 +13,7 @@ object ServiceUtil {
     fun isServiceWorking(activity: Activity, className: String): Boolean {
         val activityManager =
             activity.applicationContext.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
-        var serviceList: List<ActivityManager.RunningServiceInfo> =
+        val serviceList: List<ActivityManager.RunningServiceInfo> =
             activityManager.getRunningServices(30)
 
          if (serviceList.isEmpty()) {
