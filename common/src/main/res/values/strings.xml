@@ -37,11 +37,13 @@
     <string name="connect_administrator">已拒绝/已过期，如需加入联系学校管理员</string>
 
     <string name="hint_no_content">暂时没有内容哦</string>
+    <string name="hint_no_join_school_hint">暂未加入学校提示</string>
+    <string name="hint_no_join_school_hint_label1">暂未加入学校，无法完整使用软件，可通过以下方式加入学校</string>
+    <string name="hint_no_join_school_hint_label2">(1）联系学校管理员，由管理员邀请你加入学校；\n\n(2）登录轻舟教师坊，自行创建学校并加入_复制网址</string>
 
 
     <string name="homework_detail">作业详情</string>
     <string name="all_class">全部班级</string>
-
 
 
 </resources>

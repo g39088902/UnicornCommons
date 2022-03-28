@@ -28,6 +28,7 @@ object ARouterPath {
     const val RECYCLER_CHECKED = "/app/activity/recycleChecked"
     const val RECYCLER_ANSWER = "/app/activity/recycleAnswer"
     const val ANSWER_DETAIL = "/app/activity/answerDetail"
+    const val ANSWER_DISTRIBUTION = "/app/activity/answerDistribution"
 
     const val NOTIFICATION = "/app/activity/notification"
     const val NOTIFICATION_FRAGMENT = "/app/fragment/notification"
@@ -43,5 +44,7 @@ object ARouterPath {
 
     //个人资料
     const val PROFILE = "/login/activity/profile"
+    const val USER_PROFILE_MODIFY_FRAGMENT = "/login/fragment/userProfileModify"
+    const val USER_PROFILE_FRAGMENT = "/login/fragment/userProfile"
 
 }

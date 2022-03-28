@@ -12,6 +12,14 @@ object ScreenUtil {
         return dm.widthPixels
     }
 
+    /*
+    * 不包含状态栏
+    * */
+    fun getDisplayHeight(context: Context): Int {
+        val dm = context.resources.displayMetrics
+        return dm.heightPixels
+    }
+
     /**
      * 状态栏高度
      */
