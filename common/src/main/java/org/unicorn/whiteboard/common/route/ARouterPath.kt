@@ -27,6 +27,7 @@ object ARouterPath {
     const val NOT_SUBMIT_HOMEWORK = "/app/fragment/notSubmitHomework"
     const val RECYCLER_CHECKED = "/app/activity/recycleChecked"
     const val RECYCLER_ANSWER = "/app/activity/recycleAnswer"
+    const val ANSWER_STATISTICS = "/app/activity/answerStatistics"
     const val ANSWER_DETAIL = "/app/activity/answerDetail"
     const val ANSWER_DISTRIBUTION = "/app/activity/answerDistribution"
 

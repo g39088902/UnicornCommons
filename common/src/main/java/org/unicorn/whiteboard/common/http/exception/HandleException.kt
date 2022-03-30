@@ -1,6 +1,7 @@
 package org.unicorn.whiteboard.common.http.exception
 
 import android.net.ParseException
+import com.bugsnag.android.Bugsnag
 import com.google.gson.JsonParseException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -16,7 +17,7 @@ import javax.net.ssl.SSLHandshakeException
 
 object HandleException {
 
-    fun handleException(t: Throwable): ResultException {
+    fun handleException(t: Throwable) {
         val ex: ResultException
         when (t) {
             is ResultException -> ex = t
@@ -39,13 +40,12 @@ object HandleException {
             is UnknownServiceException -> ex = ResultException("0", "网络错误，请切换网络重试")
             is NumberFormatException -> ex = ResultException("0", "数字格式化异常")
             else -> {
-                ex = ResultException("0", "未知错误")
+                ex = ResultException("0", t.message ?: "未知错误")
+                Bugsnag.notify(t)
             }
         }
         CoroutineScope(Dispatchers.Main).launch{
             toast(ex.msg)
         }
-
-        return ex
     }
 }

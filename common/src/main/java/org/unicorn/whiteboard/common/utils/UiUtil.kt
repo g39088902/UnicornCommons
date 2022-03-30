@@ -1,6 +1,7 @@
 package org.unicorn.whiteboard.common.utils
 
 import android.content.Context
+import android.content.res.Resources
 import android.graphics.drawable.Drawable
 import android.view.View
 import androidx.appcompat.content.res.AppCompatResources
@@ -79,5 +80,31 @@ private fun getContextMaxWidthPercent(maxWidthDp: Int): Float {
         maxWidthDp >= 840 -> 0.7f
         maxWidthDp >= 600 -> 0.8f
         else -> 1f
+    }
+}
+
+object UiUtil{
+    /**
+     * 将sp值转换为px值，保证文字大小不变
+     */
+    fun sp2px(context: Context, spValue: Float): Int {
+        val fontScale = context.resources.displayMetrics.scaledDensity
+        return (spValue * fontScale + 0.5f).toInt()
+    }
+
+    /**
+     * dp转px
+     */
+    fun dip2px(dpValue: Float): Int {
+        val scale = Resources.getSystem().displayMetrics.density
+        return (dpValue * scale + 0.5f).toInt()
+    }
+
+    /**
+     * dp转px
+     */
+    fun dip2px(context: Context, dpValue: Float): Int {
+        val scale = context.resources.displayMetrics.density
+        return (dpValue * scale + 0.5f).toInt()
     }
 }

@@ -11,8 +11,7 @@ import com.chad.library.adapter.base.viewholder.BaseViewHolder
 abstract class BaseBindingQuickAdapter<T, VB : ViewBinding>(
   private val inflate: (LayoutInflater, ViewGroup, Boolean) -> VB,
   layoutResId: Int = -1
-) :
-  BaseQuickAdapter<T, BaseBindingQuickAdapter.BaseBindingHolder>(layoutResId) {
+) : BaseQuickAdapter<T, BaseBindingQuickAdapter.BaseBindingHolder>(layoutResId) {
 
   override fun onCreateDefViewHolder(parent: ViewGroup, viewType: Int) =
     BaseBindingHolder(inflate(LayoutInflater.from(parent.context), parent, false))

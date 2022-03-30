@@ -21,14 +21,6 @@ object Tips {
         Toast.makeText(context, str, Toast.LENGTH_SHORT).show()
     }
 
-    /* fun toast(context:  Context, str: String) {
-         if (str == lastDisplayString && System.currentTimeMillis() < lastDisplayTime) return
-         lastDisplayString = str
-         lastDisplayTime = System.currentTimeMillis() + 4000
-          Toast.makeText(context, str, Toast.LENGTH_SHORT).show()
-     }
- */
-
 }
 
 

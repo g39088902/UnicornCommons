@@ -36,4 +36,5 @@ object ResUtil {
     private fun context(): Context {
         return AppGlobals.get() as Context
     }
+
 }
