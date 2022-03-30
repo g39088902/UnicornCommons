@@ -2,7 +2,7 @@ package org.unicorn.whiteboard.common
 
 import android.app.Application
 import android.content.Context
-import android.support.multidex.MultiDex
+import androidx.multidex.MultiDex
 import com.alibaba.android.arouter.launcher.ARouter
 import com.tencent.mmkv.MMKV
 import org.unicorn.whiteboard.common.crash.ActivityManager
