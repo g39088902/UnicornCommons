@@ -59,12 +59,12 @@ dependencies {
     api 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0'
 
     // Retrofit + okHttp3
-    api 'com.squareup.retrofit2:retrofit:2.9.0'
-    api 'com.squareup.retrofit2:converter-gson:2.9.0'
+    api 'com.squareup.retrofit2:retrofit:2.8.2'
+    api 'com.squareup.retrofit2:converter-gson:2.8.2'
     api 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'
 
     api 'com.tencent:mmkv:1.2.12'
-    api 'com.google.code.gson:gson:2.9.0'
+    api 'com.google.code.gson:gson:2.8.8'
 
 
     api "androidx.work:work-runtime-ktx:2.7.1"
